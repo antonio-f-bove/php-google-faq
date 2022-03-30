@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, .87);
+}
+
+.container {
+  width: 70%;
+  margin: 5rem auto;
+  
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.answer p {
+  margin-bottom: 2rem;
+  font-size: .8em;
+  line-height: 2em;
+}
+
+.answer a {
+  text-decoration: none;
+}
