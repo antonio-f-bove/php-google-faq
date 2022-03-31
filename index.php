@@ -70,6 +70,30 @@ $faqs = [
     'answer' => ""
   ],
 ];
+
+$nav_items = [
+  [
+    'name' => 'Introduzione',
+    'url' => '#'
+  ],
+  [
+    'name' => 'Norem sulla privacy',
+    'url' => '#'
+  ],
+  [
+    'name' => 'Termini di servizio',
+    'url' => '#'
+  ],
+  [
+    'name' => 'Tecnologie',
+    'url' => '#'
+  ],
+  [
+    'name' => 'Domande frequenti',
+    'url' => '#',
+    'state' => 'focused'
+  ],
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,6 +106,26 @@ $faqs = [
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <?php foreach($nav_items as $item):
+          extract($item);
+          ?>
+          <li>
+            <a href="<?= $url ?>"
+            <?php if(array_key_exists('state', $item)) { echo 'class="' . $item['state'] . '"'; } ?>
+            >
+              <?= $name ?>
+            </a>
+          </li>
+          <?php
+        endforeach
+        ?>
+      </ul>
+    </nav>
+  </header>
+
   <div class="container">
     <?php foreach ($faqs as $content):
       ?>
@@ -97,7 +141,5 @@ $faqs = [
     endforeach
     ?>
   </div>
-
-  
 </body>
 </html>
