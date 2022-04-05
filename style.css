@@ -11,7 +11,36 @@ body {
 }
 
 header {
-  height: 120px;
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #aaa;
+}
+
+.google-section {
+  display: flex;
+  align
+}
+
+.google-section .logo::before {
+  content: url('https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg');
+}
+.google-section .logo {
+  
+}
+
+.google-section .title {
+  color: #5f6368;
+  opacity: 1;
+  font-size: 22px;
+}
+
+.google-section .left {
+  display: flex;
+  align-items: center;
 }
 
 nav {
@@ -29,8 +58,8 @@ nav ul a {
 }
 
 .container {
-  width: 70%;
-  margin: 0 auto 5rem;
+  max-width: 978px;
+  margin: calc(90px + 4rem) auto 5rem; /* 90px -> height of header */
   
 }
 
